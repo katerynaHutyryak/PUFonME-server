@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "no-console": "warn",
+        "prefer-destructuring": ["error", { "object": true, "array": false }],
+        "no-unused-vars": [
+            "error",
+            { "argsIgnorePattern": "req|res|next|val" }
+        ],
+        "@typescript-eslint/no-var-requires": "off"
+    }
+}
